@@ -1,0 +1,153 @@
+/* global styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    
+}
+
+.sP{
+    padding: 20px;
+}
+.mP{
+    padding: 50px;
+}
+.lP{
+    padding: 100px;
+}
+
+.sM{
+    margin: 20px;
+}
+.mM{
+    margin: 50px;
+}
+.lM{
+    margin: 100px;
+}
+
+hr{
+    width: 1000px;
+    height: 5px;
+    background-color: black;
+    /* border: 1px black; */
+    /* border: solid; */
+    margin: 0 auto;
+    border-radius: 10px;
+} 
+.container{
+    width: 1400px;
+    margin: 100px auto;
+}
+.centerText{
+    text-align: center;
+}
+
+/* header and footer */
+
+
+header{
+    background-color: rgb(119, 124, 121);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+.headerContainer{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    max-width: 1500px;
+    margin: auto;
+}
+
+footer{
+    background-color: rgb(80, 80, 177);
+    /* position: fixed;
+    bottom: 0;
+    margin-top: auto; */
+    margin-bottom: 0;
+    width: 100%;
+}
+.footerContainer{ 
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+    max-width: 1500px;
+    margin: auto;
+    margin-bottom: 0;
+}
+/* home page */
+.headerImg{
+    height: 70vh;
+    /* border: solid; */
+    background-image: url('/assets/bigHeaderImg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.blogGrid{
+    display: flex;
+    justify-content: space-around;
+}
+
+.gridItem{
+    height: 400px;
+    width: 300px;
+    box-shadow: 3px 5px 20px black;
+}
+/* admin page */
+.adminContainer{
+display: flex;
+justify-content: center;
+}
+
+.adminPanel{
+    box-shadow: 4px 4px 10px black;
+    display: inline-block;
+    padding: 100px;
+    border-radius: 10px;
+    /* cursor: pointer; */
+}
+.submit{
+    cursor: pointer;
+}
+input, textarea{
+    padding: 5px;
+}
+/* .adminPanel:hover{
+    box-shadow: 0px 0px 50px black;
+    padding: 150px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+

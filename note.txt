@@ -1,0 +1,28 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100JsConcepts</title>
+</head>
+<body>
+    <header>
+    <h2 class="logo">100 JsConcepts</h2>
+    </header>
+
+    <div class="aboutSection container">
+        <h1>About this site</h1>
+        <p>this site is a project im using to really understand JavaScript frome the basics to the deep innerworkings. i want to just really dive in deep and master javasript before i move on and start learning anything else. so thats going to be the use of this!</p>
+    </div>
+    <div class="firstConcept container">
+        <h2>First Concept</h2>
+        <p>im going to start at the absulte begenning, the fondementals of all programing.Operators! Lets go over a list of Javascript operators. Arithmetic operators, assignment Operator, Comparison Operators, String Operators, Logical Operators, Bitwise Operators, Ternary Operators and Type Operators.</p>
+        <p>the assignment Operator is simply the equal sign (=) this is the asignment Operatorin pretty much every language as far as i know. lets say we want to asign a value to a variable you could use the var keyword, then you could name it and then asign a value, like this (var number = 12). its hoestly to simple to go into to much detail about.</p>
+        <p>now lets look at arithmetic operators, these are also really simple because these are just the literally just arithmetic operators, + addition - subtraction * multiplication / division. and they do exactly that.</p>
+        
+    </div>
+
+
+    
+</body>
+</html> -->

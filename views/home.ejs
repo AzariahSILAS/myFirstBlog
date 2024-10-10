@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/head') %>
+<body>
+    <%- include('./partials/header') %>
+    
+   <div class="headerImg"> </div>
+   <div class="container">
+    <p>100 concepts is a simple blog site that im using to help myself understand the concept of javaScript. so what im doing is going over 100 different concepts starting with the beginning concepts going to the advanced concepts. im going to right a new blog each day starting at the absolute beginging </p>
+   </div>
+   
+   <hr>
+   <div class="blogList container">
+        <h2 class="sM centerText">New Post</h2>
+        <div class="blogGrid container">
+            <% data.forEach(element => { %>
+                <div class="gridItem">
+                    <a href="/Post/<%= element._id %>">
+                        <h3 class="sM "><%= element.title %></h3>
+                    </a>
+                    <p class="sM"><%= element.mainContent %></p>
+                </div>
+            <% }); %> 
+        </div>
+    </div>
+  
+       
+
+
+    <%- include('./partials/footer') %>
+    
+</body>
+</html>
