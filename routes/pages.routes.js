@@ -23,8 +23,13 @@ router.get('/contact', (req, res) => {
 
 
 // PostsPage
-router.get('/posts', (req, res) => {
-    res.render('posts', {title: 'Blog', message: 'Blog Post' });
+router.get('/posts', async (req, res) => {
+    try {
+        const data = await Post.find()
+       res.render('posts', {title: 'post', message: 'post', data }); 
+    } catch (error) { 
+          
+    }   
 });
 
 

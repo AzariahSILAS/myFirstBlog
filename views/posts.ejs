@@ -1,22 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
+
 <%- include('./partials/head') %>
-<body>
+
     <%- include('./partials/header') %>
-    <div class="firstSection section">
-        <h1><%= message %></h1>
-    </div>
-    <div class="secondSection section">
-        <div class="blogPost">
-            <h1>Blog Post</h1>
-            <div class="blogGrid">
-                <ul>
-                    <li></li>
-                </ul>
-            </div>
+    <div class="blogList container">
+        <h2 class="sM centerText">New Post</h2>
+        <div class="blogGrid container">
+            <% data.forEach(element => { %>
+                <div class="gridItem">
+                    <a href="/Post/<%= element._id %>">
+                        <h3 class="sM "><%= element.title %></h3>
+                    </a>
+                    <p class="sM"><%= element.mainContent %></p>
+                </div>
+            <% }); %> 
         </div>
     </div>
     <%- include('./partials/footer') %>
     
-</body>
-</html>
