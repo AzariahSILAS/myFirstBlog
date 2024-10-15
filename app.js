@@ -42,6 +42,6 @@ app.use('/', indexRoute);
 app.use('/', postRoutes);
 
 app.listen(PORT, () => {
-    connectDB()
+    // connectDB()
     console.log(`listening on port ${PORT}`)
 })   
