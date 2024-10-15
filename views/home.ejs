@@ -14,15 +14,7 @@
         <h2 class="sM centerText">New Post</h2>
         <div class="blogGrid container">
 
-            <% data.forEach(element => { %>
-                <div class="gridItem sP">
-                    <a href="/Post/<%= element._id %>">
-                        <h3 class="sM "><%= element.title %></h3>
-                        <div class="sM"><%- element.mainContent %></div>
-                    </a>
-                    
-                </div>
-            <% }); %> 
+           
         </div>
         <div class="viewMore">
             <a href="/posts">

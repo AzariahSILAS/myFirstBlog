@@ -8,13 +8,22 @@ import bcrypt from 'bcryptjs';
 // Home
 router.get('/', async (req, res) => {
     try {
-        const data = await Post.find()
-       res.render('home', {title: '100 Concepts', message: 'Home Page', data }); 
+        // const data = await Post.find()
+       res.render('home', {title: '100 Concepts', message: 'Home Page'}); 
     } catch (error) { 
-          
+      console.error(error)    
     }  
      
 });
+// router.get('/', async (req, res) => {
+//     try {
+//         const data = await Post.find()
+//        res.render('home', {title: '100 Concepts', message: 'Home Page', data }); 
+//     } catch (error) { 
+          
+//     }  
+     
+// });
 
 
 // // Contact
