@@ -1,8 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import Post from '../Database/models/post.js';
-import User from '../Database/models/user.js';
-import bcrypt from 'bcryptjs';
+import Post from '../Database/models/post.js' 
 
 
 // Home
@@ -21,6 +19,7 @@ router.get('/', async (req, res) => {
 //        res.render('home', {title: '100 Concepts', message: 'Home Page', data }); 
 //     } catch (error) { 
           
+<<<<<<< HEAD
 //     }  
      
 // });
@@ -123,6 +122,47 @@ router.get('/', async (req, res) => {
 //         res.status(500).send('Server error');
 //     }
 // }); 
+=======
+    }   
+});
+
+
+// Post
+router.get('/post/:id', async (req, res) => {
+
+    try {
+
+        let slug = req.params.id;
+        const data = await Post.findById(slug);
+        const locals = {title: `Blog ${slug}`, message: 'Blog Post', post: data }
+        console.log(data.mainContent)
+
+        res.render('post', locals);  
+    } catch (error) {  
+        console.error(error) 
+    }
+});
+
+
+ 
+
+
+
+
+
+// -------------------- admin routers ----------------------------
+
+
+ 
+router.get('/admin', (req, res) => {
+    res.render('admin', {title: 'Blog', message: 'Blog Post'});
+});
+
+router.get('/login', (req, res) => {
+    res.render('login', {title: 'login'});
+});  
+// ---------------------------
+>>>>>>> parent of c014051 (ok now ive a boilerplate that i can user to create blog sites, it still needs a ton of cleaning up but this will do for now!)
 
 
 
@@ -138,21 +178,12 @@ export default router;
  
 
 
-// Function to insert a user
-async function insertUser() {
-    try {
-        const hashedPassword = await bcrypt.hash("Azzie123456789", 10); // Hash the password
-        await User.insertMany([ 
-            {
-                username: "Azariah",
-                password: hashedPassword  // Store the hashed password
-            }
-        ]);
-        console.log("User inserted successfully");
-    } catch (error) {
-        console.error("Error inserting user:", error);
-    }
-}
-
-// Call the function
-// insertUser();
+// function insertPostData() {
+//     Post.insertMany([ 
+//         {
+//             title: "My second blog!",
+//             mainContent: "in this post i am going to talk about the importence of Using NodeJs when programing a web App!!"
+//         }
+//     ]) 
+// }
+// // insertPostData()

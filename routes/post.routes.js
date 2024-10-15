@@ -2,11 +2,11 @@ import express from 'express';
 const router = express.Router();
 import Post from '../Database/models/post.js' 
 
-router.post('/post', async (req, res) => { 
+router.post('/post', async (req, res) => {
     try {
         const newPost = new Post({
             title: req.body.title,
-            mainContent: req.body.mainContent
+            mainContent: req.body.content
         });
         await newPost.save();
         res.redirect('/');

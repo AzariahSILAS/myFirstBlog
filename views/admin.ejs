@@ -9,56 +9,33 @@
     <%- include('./partials/header') %>
     <div class=" adminContainer container">
       <div class="adminPanel">
-        
         <form action="/post" method="POST">
-          <!-- <input type="text" name="title" placeholder="Post title">
-          <br> -->
-          <div id="editor-container"></div>
-          
-          <input type="hidden" name="mainContent" id="hidden-content">
+          <div>
+            <label for="title">Blog Title:</label>
+            <input type="text" id="title" name="title" required>
+          </div>
+          <div id="editor">
+            <p>Start typing your blog here...</p>
+          </div>
+          <input type="hidden" name="content" id="content">
           <br>
-          <button type="submit">Submit Post</button>
+          <button class="submit" type="submit">Save Post</button>
         </form>
-        
-        <script>
-          // On form submit, get the Quill editor content and store it in the hidden input
-          document.querySelector('form').onsubmit = function() {
-            document.querySelector('#hidden-content').value = quill.root.innerHTML;
-          };
-        </script>
-        
       </div>
     </div>
     <%- include('./partials/footer') %>
 
     <script>
-      var quill = new Quill('#editor-container', {
-        theme: 'snow',  // 'snow' is the default theme that provides the toolbar
-        placeholder: 'Compose an epic...',
-        modules: {
-          toolbar: [
-            ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-            ['blockquote', 'code-block'],
-    
-            [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-            [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-            [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
-            [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
-            [{ 'direction': 'rtl' }],                         // text direction
-    
-            [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-            [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-    
-            [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
-            [{ 'font': [] }],
-            [{ 'align': [] }],
-            ['link', 'image', 'video'],      
-    
-            ['clean']                                         // remove formatting button
-          ]
-        }
+      var quill = new Quill('#editor', {
+          theme: 'snow'
       });
-    </script>
+  
+      // On form submit, populate the hidden field with the content
+      document.querySelector('form').onsubmit = function() {
+          var content = document.querySelector('input[name=content]');
+          content.value = quill.root.innerHTML;
+      };
+     </script>
 </body>
 </html>
 

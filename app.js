@@ -5,9 +5,6 @@ import dotenv from 'dotenv';
 import { connectDB } from './Database/connectDb.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import bcrypt from 'bcryptjs';
-import session from 'express-session';
-import MongoStore from 'connect-mongo';
 
 // Define __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -21,6 +18,7 @@ const PORT = process.env.PORT;
 // app.use(express.urlencoded({ extended: true }));
 // app.use(express.static(path.join(__dirname, 'public')));
 
+<<<<<<< HEAD
 // // Use session middleware
 // app.use(session({
 //     secret: process.env.SESSION_SECRET, // You should store this securely (e.g., in environment variables)
@@ -30,6 +28,8 @@ const PORT = process.env.PORT;
 //     cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1-day session expiration
 // }));
 
+=======
+>>>>>>> parent of c014051 (ok now ive a boilerplate that i can user to create blog sites, it still needs a ton of cleaning up but this will do for now!)
  
 //---set up the view section---- 
 app.set('view engine', 'ejs');
