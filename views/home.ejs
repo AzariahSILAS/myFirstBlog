@@ -13,14 +13,12 @@
    <div class="blogList container">
         <h2 class="sM centerText">New Post</h2>
         <div class="blogGrid container">
-
             <% data.forEach(element => { %>
-                <div class="gridItem sP">
+                <div class="gridItem">
                     <a href="/Post/<%= element._id %>">
                         <h3 class="sM "><%= element.title %></h3>
-                        <div class="sM"><%- element.mainContent %></div>
                     </a>
-                    
+                    <p class="sM"><%= element.mainContent %></p>
                 </div>
             <% }); %> 
         </div>
