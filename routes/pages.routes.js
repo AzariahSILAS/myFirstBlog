@@ -15,12 +15,21 @@ router.get('/', async (req, res) => {
     }  
      
 });
+// router.get('/', async (req, res) => {
+//     try {
+//         const data = await Post.find()
+//        res.render('home', {title: '100 Concepts', message: 'Home Page', data }); 
+//     } catch (error) { 
+          
+//     }  
+     
+// });
 
 
-// Contact
-router.get('/contact', (req, res) => {
-    res.render('contact', {title: 'Contact', message: 'Contact'});
-});
+// // Contact
+// router.get('/contact', (req, res) => {
+//     res.render('contact', {title: 'Contact', message: 'Contact'});
+// });
 
 
 
